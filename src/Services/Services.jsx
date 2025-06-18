@@ -6,6 +6,7 @@ import Footer from '../Home/Footer';
 const Services = () => {
     return (
         <>
+        <div id="cover">
             <div id="totalr">
                 <div id="Hederarea">
 
@@ -69,6 +70,7 @@ const Services = () => {
                 </div>
             </div>
             <Footer/>
+            </div>
         </>
     )
 }
