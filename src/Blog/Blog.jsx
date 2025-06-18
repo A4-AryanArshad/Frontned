@@ -45,7 +45,7 @@ const BlogPage = () => {
         <div id="uut" key={blog.id} className="mb-4 border rounded shadow-sm">
           <button
             className="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 font-semibold"
-            onClick={() => toggleBlog(blog.id)}
+            id="texw" onClick={() => toggleBlog(blog.id)}
           >
             {blog.title}
           </button>
