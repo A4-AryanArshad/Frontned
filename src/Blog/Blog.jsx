@@ -33,6 +33,7 @@ const BlogPage = () => {
 
   return (
     <>
+    <div id="cover">
     <div id="totalr3">
     <div id="ttq">
     <Header/>
@@ -59,6 +60,7 @@ const BlogPage = () => {
 
     </div>
   <Footer/>
+  </div>
     </>
   );
 };

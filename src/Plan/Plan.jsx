@@ -6,6 +6,7 @@ const Plan = () => {
     return (
 
         <>
+        <div id="cover">
             <div id="uuq">
                 <div id="hederArea">
                     <Header />
@@ -112,6 +113,7 @@ assets while contributing to the planet.</p>
             </div>
 
 <Footer/>
+</div>
 
         </>
 
