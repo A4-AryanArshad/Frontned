@@ -1,5 +1,5 @@
 #ttq{
-    height: 100px;
+    height: 190px;
     background-color: black;
 }
 #bloger{
@@ -42,3 +42,23 @@ margin-bottom: 40px;
 #texw{
     color: black;
 }
+
+
+@media screen and (max-width: 784px) {
+
+    #ttq{
+
+        background-color: black;
+        height: 140px;
+    }
+  }
+  
+  @media screen and (max-width: 662px) {
+
+    #ttq{
+
+        background-color: black;
+        height: 120px;
+    }
+  
+  }

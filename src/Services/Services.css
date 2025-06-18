@@ -1,6 +1,6 @@
 #Hederarea{
     background-color: black;
-    height: 100px;
+    height: 190px;
 }
 
 #totalr{
@@ -184,3 +184,20 @@ justify-content: center;
 #cover{
     background-color: #90be55;
 }
+
+@media screen and (max-width: 784px) {
+    #Hederarea{
+        background-color: black;
+        height: 140px;
+    }
+    
+  }
+  
+  @media screen and (max-width: 662px) {
+    #Hederarea{
+        background-color: black;
+        height: 120px;
+    }
+  
+  }
+

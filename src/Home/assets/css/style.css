@@ -1480,3 +1480,20 @@ body {
 
 
 }
+#logoo{
+  height: 170px;
+}
+
+@media screen and (max-width: 784px) {
+  #logoo{
+    height: 130px;
+  }
+
+}
+
+@media screen and (max-width: 662px) {
+  #logoo{
+    height: 100px;
+  }
+
+}

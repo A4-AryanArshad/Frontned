@@ -25,7 +25,7 @@ const Header = () => {
       <header className="header">
         <div className="container">
           <h1>
-            <a href="#" className="logo">C02e PORTAL</a>
+            <a href="#" className="logo"><img id="logoo" src="Logo.png"></img></a>
           </h1>
 
           <select name="language" className="lang-switch">
