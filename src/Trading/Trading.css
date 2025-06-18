@@ -1,0 +1,37 @@
+#coming{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-top: 400px;
+}
+
+#coming h1{
+    font-size: 110px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 805px) {
+
+    #coming h1{
+        font-size: 70px;
+
+    }
+
+}
+
+@media screen and (max-width: 494px) {
+
+    #coming h1{
+        font-size: 40px;
+
+    }
+
+}
+
+@media screen and (max-width: 415px) {
+    #coming{
+height: 100vh;
+padding-top: 100px;
+    }
+}

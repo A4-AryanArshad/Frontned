@@ -1,0 +1,182 @@
+#Hederarea{
+    background-color: black;
+    height: 100px;
+}
+
+#totalr{
+    background-color: #90be55;
+    color: black;
+}
+#Listingg{
+    padding-top: 80px;
+    padding-left: 220px;
+}
+#Listingg h1{
+    font-weight: 400;
+    font-size: 50px;
+}
+#Listingg p{
+    font-size: 20px;
+}
+#i1 img{
+height: 160px;
+border-radius: 20px;
+
+}
+
+#i1l img{
+    height: 160px;
+    width: 470px;
+    border-radius: 20px;
+    
+    }
+    #bannerr1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+    }
+
+    #texterimager{
+        margin: 10px;
+        background-color: white;
+        width: 400px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        border-radius: 20px;
+        text-align: center;
+   
+    }
+    #texterimager h2{
+        font-weight: 400;
+    }
+    #innerdes{
+        width: 1300px;
+        text-align: center;
+    }
+    #des{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+#bottomimage{
+    background-image: url('https://media.licdn.com/dms/image/v2/C5612AQGMzXqdpddLAg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1630992618554?e=2147483647&v=beta&t=-AHTKUxMRYh5u-TsFE50D2km8ctcwJ094doarXBgAuU'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+
+}
+#bottomtexter{
+    width: 1300px;
+    text-align: center;
+}
+#ubottomtexter{
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+#bcard1{
+    background-color: black;
+    color: white;
+    width: 600px;
+    padding: 34px;
+    border-radius: 20px;
+    margin: 40px;
+}
+
+#bottomone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bcard11{
+    background-color: black;
+    color: white;
+    width: 600px;
+    padding: 38px;
+    border-radius: 20px;
+    margin: 40px;
+}
+
+@media screen and (max-width: 1330px) {
+#bannerr1{
+    flex-direction: column;
+}
+
+
+#texterimager{
+   width: 470px;
+}
+
+}
+
+@media screen and (max-width: 701px) {
+#Listingg{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-top: 40px;
+}
+
+#bottomone{
+    flex-direction: column;
+}
+
+#bcard11{
+    background-color: black;
+    color: white;
+    width: 300px;
+    padding: 38px;
+    border-radius: 20px;
+    margin: 40px;
+}
+#bcard1{
+    background-color: black;
+    color: white;
+    width: 300px;
+    padding: 34px;
+    border-radius: 20px;
+    margin: 40px;
+}
+}
+
+
+@media screen and (max-width: 477px) {
+
+    #texterimager{
+        width: 370px;
+     }
+     #i1 img{
+        width: 370px;
+   
+     }
+     #i1l img{
+        width: 370px;
+        margin: 0;
+        padding: 0;
+     }
+}
+@media screen and (max-width: 389px) {
+
+    #texterimager{
+        width: 270px;
+     }
+     #i1 img{
+        width: 270px;
+   
+     }
+     #i1l img{
+        width: 270px;
+        margin: 0;
+        padding: 0;
+     }
+}
