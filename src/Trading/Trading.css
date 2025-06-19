@@ -222,3 +222,19 @@ width: 200px;
                 font-size: 20px;   
             }
             }
+
+
+            @media screen and (max-width: 770px) {
+
+                #texterareaq{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    color: red;
+                    padding: 10px;
+                    padding-bottom: 90px;
+                }
+                
+                
+                }
