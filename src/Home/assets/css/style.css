@@ -1510,12 +1510,16 @@ body {
   padding-top: 260px;
 }
 #uuy{
-  margin-top: 200px;
+  margin-top: 140px;
 }
 
 @media screen and (max-width: 800px) {
 
 #logoo{
+  height: 170px;
+}
+#wqeq{
+  background-color: black;
   height: 170px;
 }
 }
