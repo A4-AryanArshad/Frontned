@@ -27,7 +27,7 @@ const About = () => {
       <div className="container">
         {/* ABOUT BANNER */}
         <div className="about-banner">
-          <h2 className="deco-title">About Us</h2>
+          <h2 className="deco-title"></h2>
           <img
             src={decoImg}
             width="58"

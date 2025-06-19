@@ -13,7 +13,9 @@ import Header from "./Header";
 const Home = () => {
   return (
     <>
+    <div id="ffgq">
     <Header/>
+    </div>
       <Hero />
       <Features />
       <About />

@@ -16,7 +16,7 @@ const Hero = () => {
               height="7"
               alt="Wavy line"
             />
-            <span>Welcome to C02e PORTA</span>
+            <span>Welcome to C02e PORTAL</span>
           </p>
 
           <h2 className="h1 hero-title">
