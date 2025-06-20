@@ -15,10 +15,15 @@ const Trading = () => {
           <img src="./Logo2.webp" />
           <button>Coming Soon</button>
         </div>
+        <div id="upperlog">
         <div id="logp2a2">
           <h1>Blockchain-Based P2P Carbon Credits Marketplace</h1>
           <img src="https://greenerinsights.com/wp-content/uploads/2024/12/Blockchain-Carbon-Market-768x452.webp" />
         </div>
+        </div>
+        <div id="middleer">
+
+   
         <div id="logo2a3">
           <h1>Revolutionizing Carbon Emissions for a Sustainable Future</h1>
           <div id="innerl1">
@@ -76,6 +81,8 @@ const Trading = () => {
             <p>Imporoa monine you unil towiid pantom system with othen as dairy moosolvin ehiy ene to gnoth ethase centre finalichen of penilom opionainar and I randi motcibouss curcaloua </p>
           </div>
         </div>
+        </div>
+        <div id="lasterr">
         <div id="covv">
           <div id="logp2a2">
             <h2>Fractioanl Investment Hub</h2>
@@ -87,6 +94,7 @@ const Trading = () => {
           <h1>Democratizing Green Investment A New Paradigm</h1>
           <p>The urgency of climate action has spurred a global reevcalclation of investment strategies, pushing sustainable finance from a niche consideration to a central pider diffronente inisource. Winlin this transformative staff, Fractionalmat. Ownership in Green Infrastructure stands silt as a particularly compelling innovation. In represure a departure from traditional investment models, which often limit participation to institutional giant’s and high-net worth individuals.
           </p>
+        </div>
         </div>
         <Footer/>
       </div>
