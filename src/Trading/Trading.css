@@ -263,7 +263,8 @@ width: 200px;
 
             #upperlog{
                 border: 3px solid black;
-                padding: 10px;
+   padding-top: 10px;
+   padding-bottom: 10px;
                 border-radius: 10px;
             }
 
@@ -309,6 +310,14 @@ width: 200px;
 
 #logp2a{
     flex-direction: column;
+}
+
+            }
+
+            @media screen and (max-width: 662px) {
+#logp2a button{
+    margin: 0;
+    margin-bottom: 50px;
 }
 
             }
