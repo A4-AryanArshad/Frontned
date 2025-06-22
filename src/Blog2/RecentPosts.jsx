@@ -1,64 +1,59 @@
 import React from "react";
 
-// Sample recent posts data
+// ✅ Corrected image paths (public folder usage)
 const recentPosts = [
   {
-    image: "./Data/assets/images/recent-1.jpg",
+    image: "/assets/images/recent-1.jpg",
     title: "Creating is a privilege but it’s also a gift",
     description:
       "Nullam vel lectus vel velit pellentesque dignissim nec id magna. Cras molestie ornare quam at semper. Proin a ipsum ex...",
     tags: ["Lifestyle", "People", "Review"],
-    authors: [
-      "./Data/assets/images/author-3.jpg",
-      "./Data/assets/images/author-5.jpg",
-    ],
+    authors: ["/assets/images/author-3.jpg", "/assets/images/author-5.jpg"],
   },
   {
-    image: "./Data/assets/images/recent-2.jpg",
+    image: "/assets/images/recent-2.jpg",
     title: "Being unique is better than being perfect",
     description:
       "Nam in pretium dui. Phasellus dapibus, mi at molestie cursus, neque eros aliquet nisi, non efficitur nisi est nec mi...",
     tags: ["Design", "Product", "Idea"],
-    authors: ["./Data/assets/images/author-5.jpg"],
+    authors: ["/assets/images/author-5.jpg"],
   },
   {
-    image: "./Data/assets/images/recent-3.jpg",
+    image: "/assets/images/recent-3.jpg",
     title: "Now we’re getting somewhere",
     description:
       "Class aptent taciti sociosqu ad litora torquent per conubia nostra. Donec volutpat rhoncus quam, a feugiat elit gravida eget...",
     tags: ["Idea", "Product", "Review"],
     authors: [
-      "./Data/assets/images/author-2.jpg",
-      "./Data/assets/images/author-5.jpg",
-      "./Data/assets/images/author-1.jpg",
+      "/assets/images/author-2.jpg",
+      "/assets/images/author-5.jpg",
+      "/assets/images/author-1.jpg",
     ],
   },
   {
-    image: "./Data/assets/images/recent-4.jpg",
-    title: "The trick to getting more done is to have the freedom to roam around",
+    image: "/assets/images/recent-4.jpg",
+    title:
+      "The trick to getting more done is to have the freedom to roam around",
     description:
       "Integer nec mi cursus, blandit est et, auctor mauris. Aenean ex metus, faucibus in mattis at, tincidunt eu dolor...",
     tags: ["Lifestyle", "Design"],
-    authors: ["./Data/assets/images/author-3.jpg"],
+    authors: ["/assets/images/author-3.jpg"],
   },
   {
-    image: "./Data/assets/images/recent-5.jpg",
+    image: "/assets/images/recent-5.jpg",
     title: "Every day, in every city and town across the country",
     description:
       "Morbi a facilisis lectus. Ut eu dapibus risus, a interdum justo. Vestibulum volutpat velit ac tellus mollis...",
     tags: ["People", "Story", "Lifestyle"],
-    authors: [
-      "./Data/assets/images/author-1.jpg",
-      "./Data/assets/images/author-6.jpg",
-    ],
+    authors: ["/assets/images/author-1.jpg", "/assets/images/author-6.jpg"],
   },
   {
-    image: "./Data/assets/images/recent-6.jpg",
+    image: "/assets/images/recent-6.jpg",
     title: "Your voice, your mind, your story, your vision",
     description:
       "Nullam auctor nisi non tortor porta, id dapibus lectus rhoncus. Vivamus lobortis posuere enim finibus sodales...",
     tags: ["People", "Review", "Story"],
-    authors: ["./Data/assets/images/author-6.jpg"],
+    authors: ["/assets/images/author-6.jpg"],
   },
 ];
 
@@ -81,7 +76,7 @@ const RecentPosts = () => {
                     style={{ "--width": "100", "--height": "100" }}
                   >
                     <img
-                      src={`./Data/assets/images/author-${i}.jpg`}
+                      src={`/assets/images/author-${i}.jpg`}
                       width="100"
                       height="100"
                       alt="top author"
