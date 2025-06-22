@@ -238,6 +238,9 @@ justify-content: center;
     width: 300px;
     padding: 20px;
 }
+#fcourse button{
+    color: white;
+}
 
 #ufcourse{
     display: flex;
