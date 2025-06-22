@@ -40,7 +40,7 @@ const BlogPage = () => {
     </div>
 
     <div id="rrew" className="p-6 max-w-3xl mx-auto">
-      <h1 id="bloger"className="text-3xl font-bold mb-6 text-center">Blogs</h1>
+      <h1 id="bloger"className="text-3xl font-bold mb-6 text-center">News</h1>
       {blogData.map((blog) => (
         <div id="uut" key={blog.id} className="mb-4 border rounded shadow-sm">
           <button
@@ -58,6 +58,9 @@ const BlogPage = () => {
       ))}
     </div>
 
+    </div>
+    <div id="Blogs">
+      
     </div>
   <Footer/>
   </div>

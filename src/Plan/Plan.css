@@ -5,7 +5,7 @@
 
 }
 #uuq{
-    background-color: #90be55;
+    background-color: white
 }
 
 #Cards{
@@ -21,7 +21,7 @@ margin: 40px;
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: black;
+    background-color: #90be55;
     color: white;
     border-radius: 10px;
     cursor: pointer;
@@ -50,7 +50,7 @@ margin: 40px;
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: black;
+    background-color: #90be55;
     color: white;
     border-radius: 10px;
     cursor: pointer;
@@ -60,7 +60,7 @@ margin-top: 20px;
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: black;
+    background-color: #90be55;
     color: white;
     border-radius: 10px;
     cursor: pointer;

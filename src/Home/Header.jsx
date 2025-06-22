@@ -73,9 +73,7 @@ const Header = () => {
           </nav>
 
           <div className="header-action">
-            <button className="search-btn" aria-label="Search">
-              <IoSearchOutline />
-            </button>
+         
 
           <Link to="/signup">  <button className="btn btn-primary">
               <span>Join Now</span>

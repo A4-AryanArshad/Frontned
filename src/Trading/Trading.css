@@ -3,7 +3,7 @@
     height: 220px;
 }
 #logo2b{
-    background-color: #90be55;
+    background-color: white
 }
 #logp2a{
     display: flex;
@@ -13,8 +13,8 @@
 }
 #logp2a button{
     padding: 10px;
-    background-color: black;
-    color: white;
+    background-color: #90be55;
+    color: black;
     border-radius: 10px;
     margin-bottom: 100px;
     font-size: 20px;
@@ -80,7 +80,7 @@ margin-right: 380px;
     margin-right: 100px;
 }
 #dd{
-    background-color: white;
+    background-color:#90be55;
     padding: 40px;
     width: 300px;
     text-align: center;

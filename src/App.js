@@ -8,6 +8,7 @@ import Trading from "./Trading/Trading";
 import Plan from "./Plan/Plan";
 import Services from "./Services/Services";
 import Blog from "./Blog/Blog";
+import Blog2 from "./Blog2/Blog2";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/trade" element={<Trading/>} />
         <Route path="/service" element={<Services/>} />
-        <Route path="/blog" element={<Blog/>} />
+        <Route path="/blog" element={<Blog2/>} />
         <Route path="/plans" element={<Plan/>} />
         <Route path="/signup" element={<Signup/>}  />
       </Routes>

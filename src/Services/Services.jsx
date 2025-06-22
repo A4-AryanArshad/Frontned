@@ -21,8 +21,9 @@ const Services = () => {
                     <div id="i1">
                         <img src="https://hielscherelectrical.com.au/wp-content/uploads/2021/08/Product-Review-Hanwha-Q-CELLS-Solar-Panels.jpg" />
                     </div>
-                    <div id="texterimager">
-                        <h2>Corporative Employee Training Courses</h2>
+                    <div id="i1l">
+
+                        <img src="https://www.cambridge.org/core/services/aop-file-manager/file/6560c7b957556ffa4e8ea85e" />
                     </div>
                     <div id="i1l">
 
@@ -38,8 +39,17 @@ const Services = () => {
                     </div>
 
                 </div>
+                <div id="ufcourse">
+                <div id="fcourse">
+                    <button>Corporative Employee Training Course </button>
+                </div>
+                </div>
+                <div id="ubottomimage">
+
+          
                 <div id="bottomimage">
 
+                </div>
                 </div>
                 <div id="ubottomtexter">
                     <div id="bottomtexter">

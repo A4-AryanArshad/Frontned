@@ -4,7 +4,7 @@
 }
 
 #totalr{
-    background-color: #90be55;
+    background-color: white;
     color: black;
 }
 #Listingg{
@@ -21,13 +21,32 @@
 #i1 img{
 height: 160px;
 border-radius: 20px;
+border: 1px solid black;
+margin: 10px;
+
+}
+
+@media screen and (max-width: 500px) {
+
+    #i1l img{
+     
+        margin: 0;
+        padding: 0;
+        
+        }
+
+        #bannerr1{
+            margin: 0;
+  
+        }
 
 }
 
 #i1l img{
     height: 160px;
     width: 470px;
-    border-radius: 20px;
+    border-radius: 20px;border: 1px solid black;
+    margin: 10px;
     
     }
     #bannerr1{
@@ -35,6 +54,7 @@ border-radius: 20px;
         align-items: center;
         justify-content: center;
         padding: 50px;
+
     }
 
     #texterimager{
@@ -68,8 +88,15 @@ border-radius: 20px;
     height: 600px;
     margin-top: 70px;
     margin-bottom: 70px;
+width: 1200px;
+border-radius: 30px;
+border: 1px solid black;
 
-
+}
+#ubottomimage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #bottomtexter{
     width: 1300px;
@@ -201,3 +228,34 @@ justify-content: center;
   
   }
 
+#fcourse{
+    display: flex;
+    align-items: center;
+    justify-content: center;margin-top: 60px;
+    background-color: #90be55;
+    color: white;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+}
+
+#ufcourse{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 383px) {
+
+    #fcourse{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+#bottomimage{
+    border-radius: 0;
+}
+}

@@ -222,7 +222,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  border: 1px solid var(--btn-bg, var(--pistachio));
+
   transform: translate(5px, 5px);
   transition: var(--transition-2);
 }
