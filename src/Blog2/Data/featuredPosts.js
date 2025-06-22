@@ -6,7 +6,7 @@ const featuredPosts = [
         "Vestibulum vehicula dui venenatis neque tempor, accumsan iaculis sapien ornare. Sed at ante porta, ullamcorper massa eu, ullamcorper sapien...",
       tags: ["Design", "Idea", "Review"],
       authors: [
-        "/assets/images/author-1.jpg",
+        "Data/assets/images/author-1.jpg",
         "/assets/images/author-2.jpg",
       ],
     },
