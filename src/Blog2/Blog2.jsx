@@ -9,6 +9,22 @@ const Blog2 = () => {
   return (
 <>
 <Header/>
+
+<div id="wwq">
+<div className="subscribe-container">
+      <form onSubmit={(e) => e.preventDefault()} className="subscribe-form">
+        <input
+          type="email"
+          placeholder="Add a subscribe to our newsletter"
+          required
+          className="subscribe-input"
+        />
+        <button type="submit" className="subscribe-button">
+          Subscribe
+        </button>
+      </form>
+    </div>
+</div>
 <section id="tttt" className="section featured" aria-label="featured post">
       <div className="container">
         

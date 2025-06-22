@@ -493,3 +493,52 @@
 #tttt{
   margin-top: 300px;
 }
+
+#wwq{
+
+margin-top: 400px;
+}
+
+.subscribe-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.subscribe-form {
+  display: flex;
+  background-color: white;
+  border-radius: 999px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 500px;
+  width: 100%;
+}
+
+.subscribe-input {
+  flex: 1;
+  border: none;
+  padding: 14px 20px;
+  font-size: 16px;
+  outline: none;
+  border-radius: 999px 0 0 999px;
+}
+
+.subscribe-button {
+  background-color: #90be55;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 0 999px 999px 0;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+  background-color:#90be55
+}
+
+#tttt{
+margin-top: 0;
+}
