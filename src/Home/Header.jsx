@@ -56,7 +56,7 @@ const Header = () => {
             <a href="#" className="logo">C02e PORTAL</a>
 
             <ul className="navbar-list">
-              {["Home", "Trade", "Service", "Blog", "Plans", "Login"].map((item, idx) => (
+              {["Home", "Trade", "Service", "News", "Pricing", "Login"].map((item, idx) => (
                 <li key={idx}>
                   <Link
                     to={`/${item.toLowerCase() === "home" ? "" : item.toLowerCase()}`}
