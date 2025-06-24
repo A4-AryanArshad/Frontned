@@ -18,7 +18,7 @@ const Trading = () => {
         <div id="upperlog">
         <div id="logp2a2">
           <h1>Blockchain-Based P2P Carbon Credits Marketplace</h1>
-          <img src="https://greenerinsights.com/wp-content/uploads/2024/12/Blockchain-Carbon-Market-768x452.webp" />
+          <img src="https://carboncredits.com/wp-content/uploads/2023/02/carbon-credit-futures-e1677257727994.jpg" />
         </div>
         </div>
         <div id="middleer">
@@ -86,7 +86,7 @@ const Trading = () => {
         <div id="covv">
           <div id="logp2a2">
             <h2>Fractioanl Investment Hub</h2>
-            <img src="https://www.rrfinance.com/Blogs/images/best-investment-options.png" />
+            <img src="https://pbservices.ge/wp-content/uploads/2023/04/life-hacks-1024x576.jpg.webp" />
 
           </div>
         </div>
