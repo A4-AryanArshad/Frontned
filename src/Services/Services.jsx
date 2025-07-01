@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../Home/Header'
 import "./Services.css";
 import Footer from '../Home/Footer';
+import Footer2 from '../Home/Footer2';
 
 const Services = () => {
     return (
@@ -16,6 +17,9 @@ const Services = () => {
 
                     <h1>Directory Listing</h1>
                     <p>A, B, C, D, E, F, G, H, I, J, K, L, …</p>
+                </div>
+                <div id="featured">
+                    <h1>Featured Listing</h1>
                 </div>
                 <div id="bannerr1">
                     <div id="i1">
@@ -44,13 +48,82 @@ const Services = () => {
                     <button>Corporative Employee Training Course </button>
                 </div>
                 </div>
-                <div id="ubottomimage">
+                <div id="utotalscard">
+                <div id="totalscard">
 
-          
-                <div id="bottomimage">
 
-                </div>
-                </div>
+
+                <div id="scard">
+                <img src="./s1.png" loading="lazy" data-status="idle" data-testid="image-inner-img" class="_54cbc52_1c9qxe35 _54cbc52_1c9qxe36 _54cbc52_1c9qxe31"/>
+               <h1>Climate Science - Winter/Spring 2024</h1>
+               <p>Climate change refers to long-term shifts in temperatures and weather patterns. These shifts may be natural, but since the 1800s, human activities have</p>
+               <div id="innerh1s">
+                <h1>Professor</h1>
+                <p>Marie Curie</p>
+               </div>
+               <div id="innerh1ss">
+                <h1>Commencing</h1>
+                <p>01/01/2024</p>
+               </div>
+               </div>
+               
+
+   <div id="scard">
+   <img src="s02.png" loading="lazy" data-status="idle" data-testid="image-inner-img" class="_54cbc52_1c9qxe35 _54cbc52_1c9qxe36 _54cbc52_1c9qxe31"/>
+   <h1>Vision Science - Winter/Spring 2024</h1>
+               <p>Study the mechanisms that allow us to visualise the world. This course explores the sensory processes that underlie vision</p>
+               <div id="innerh1s">
+                <h1>Professor</h1>
+                <p>Marie Curie</p>
+               </div>
+               <div id="innerh1ss">
+                <h1>Commencing</h1>
+                <p>01/01/2024</p>
+               </div>
+               </div>
+               
+
+
+
+               <div id="scard">
+               <img src="./s03.png" loading="lazy" data-status="idle" data-testid="image-inner-img" class="_54cbc52_1c9qxe35 _54cbc52_1c9qxe36 _54cbc52_1c9qxe31"/>
+               <h1>Economics - Winter/Spring 2024</h1>
+               <p>You’ll learn the fundamental principles of economics and how to critique them. The level of analytical thinking encouraged in this course</p>
+               <div id="innerh1s">
+                <h1>Professor</h1>
+                <p>Marie Curie</p>
+               </div>
+               <div id="innerh1ss">
+                <h1>Commencing</h1>
+                <p>01/01/2024</p>
+               </div>
+               </div>
+               
+
+
+
+
+
+               <div id="scard">
+                <img src="./s1.png" loading="lazy" data-status="idle" data-testid="image-inner-img" class="_54cbc52_1c9qxe35 _54cbc52_1c9qxe36 _54cbc52_1c9qxe31"/>
+               <h1>Climate Science - Summer/Fall 2024</h1>
+               <p>Climate change refers to long-term shifts in temperatures and weather patterns. These shifts may be natural, but since the 1800s</p>
+               <div id="innerh1s">
+                <h1>Professor</h1>
+                <p>Marie Curie</p>
+               </div>
+               <div id="innerh1ss">
+                <h1>Commencing</h1>
+                <p>01/01/2024</p>
+               </div>
+               </div>
+               
+
+
+               </div>
+
+
+               </div>
                 <div id="ubottomtexter">
                     <div id="bottomtexter">
                         <p>Our training courses aim to bring awareness to employees in their day to day impact their jobs have on the climate impact and how they can mitigate their Carbon Emissions footprint</p>
@@ -79,7 +152,7 @@ const Services = () => {
                     </div>
                 </div>
             </div>
-            <Footer/>
+     <Footer2/>
             </div>
         </>
     )

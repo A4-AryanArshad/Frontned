@@ -80,19 +80,7 @@ margin: 10px;
         justify-content: center;
     }
 
-#bottomimage{
-    background-image: url('https://media.licdn.com/dms/image/v2/C5612AQGMzXqdpddLAg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1630992618554?e=2147483647&v=beta&t=-AHTKUxMRYh5u-TsFE50D2km8ctcwJ094doarXBgAuU'); /* Replace with your image path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 600px;
-    margin-top: 70px;
-    margin-bottom: 70px;
-width: 1200px;
-border-radius: 30px;
-border: 1px solid black;
 
-}
 #ubottomimage{
     display: flex;
     align-items: center;
@@ -261,4 +249,75 @@ justify-content: center;
 #bottomimage{
     border-radius: 0;
 }
+}
+
+#scard{
+    width: 300px;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+#scard img{
+width: 100%;
+}
+
+#scard h1{
+    font-size: 20px;
+}
+
+#innerh1s h1{
+    font-size: 15px;
+}
+
+#innerh1s{
+    padding-top: 20px;
+}
+
+#innerh1s p{
+    background-color: rgb(237, 230, 230);
+width: 90px;
+}
+
+#innerh1ss h1{
+    font-size: 15px;
+}
+
+#innerh1ss{
+    padding-top: 10px;
+}
+
+#totalscard{
+    display: flex;
+}
+#utotalscard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+
+@media screen and (max-width: 1300px) {
+
+    #totalscard{
+
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+    }
+
+}
+
+#featured h1{
+    font-size: 40px;
+    font-weight: 400;
+}
+
+#featured {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

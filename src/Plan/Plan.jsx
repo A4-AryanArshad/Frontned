@@ -2,6 +2,7 @@ import React from 'react'
 import "./Plan.css";
 import Header from '../Home/Header';
 import Footer from '../Home/Footer';
+import Footer2 from '../Home/Footer2';
 const Plan = () => {
     return (
 
@@ -112,7 +113,7 @@ assets while contributing to the planet.</p>
                 </div>
             </div>
 
-<Footer/>
+<Footer2/>
 </div>
 
         </>

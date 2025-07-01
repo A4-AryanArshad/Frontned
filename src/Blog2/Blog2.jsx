@@ -1,108 +1,102 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './assets/css/style.css';
-import featuredPosts from './Data/featuredPosts';
 import RecentPosts from './RecentPosts';
 import Header from '../Home/Header';
 import Footer from '../Home/Footer';
 
 const Blog2 = () => {
-  return (
-<>
-<Header/>
+  const [posts, setPosts] = useState([]);
 
-<div id="wwq">
-<div className="subscribe-container">
-      <form onSubmit={(e) => e.preventDefault()} className="subscribe-form">
-        <input
-          type="email"
-          placeholder="Add a subscribe to our newsletter"
-          required
-          className="subscribe-input"
-        />
-        <button type="submit" className="subscribe-button">
-          Subscribe
-        </button>
-      </form>
-    </div>
-</div>
-<section id="tttt" className="section featured" aria-label="featured post">
-      <div className="container">
-        
-        <h2 className="h2 section-title">
-        Get started with our <strong className="strong">News</strong>
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const res = await axios.get('https://cbackend-lilac.vercel.app/api/news');
+        setPosts(res.data);
+      } catch (error) {
+        console.error('Error fetching news:', error);
+      }
+    };
+
+    fetchNews();
+  }, []);
+
+  // Helper to truncate description
+  const truncate = (text, wordLimit) => {
+    return text.split(" ").slice(0, wordLimit).join(" ") + "...";
+  };
+
+  return (
+    <>
+      <Header />
+      <div id="wwq">
+        <div className="subscribe-container">
+          <form onSubmit={(e) => e.preventDefault()} className="subscribe-form">
+            <input
+              type="email"
+              placeholder="Add a subscribe to our newsletter"
+              required
+              className="subscribe-input"
+            />
+            <button type="submit" className="subscribe-button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <section id="tttt" className="section featured" aria-label="featured post">
+        <div className="container">
+          <h2 className="h2 section-title">
+            Get started with our <strong className="strong">News</strong>
           </h2>
 
-        <ul className="has-scrollbar">
-          {featuredPosts.map((post, index) => (
-            <li key={index} className="scrollbar-item">
-              <div className="blog-card">
-                <figure
-                  className="card-banner img-holder"
-                  style={{ "--width": 500, "--height": 600 }}
-                >
-                  <img
-                    src={post.image}
-                    width="500"
-                    height="600"
-                    loading="lazy"
-                    alt={post.title}
-                    className="img-cover"
-                  />
+          <ul className="has-scrollbar">
+            {posts.map((post, index) => (
+              <li key={index} className="scrollbar-item">
+                <div className="blog-card">
+                  <figure
+                    className="card-banner img-holder"
+                    style={{ "--width": 500, "--height": 600 }}
+                  >
+                    <img
+                      src={post.imageUrl}
+                      width="500"
+                      height="600"
+                      loading="lazy"
+                      alt={post.title}
+                      className="img-cover"
+                    />
+                  </figure>
 
-                  <ul className="avatar-list absolute">
-                    {post.authors.map((author, i) => (
-                      <li key={i} className="avatar-item">
-                        <a
-                          href="#"
-                          className="avatar img-holder"
-                          style={{ "--width": 100, "--height": 100 }}
-                        >
-                          <img
-                            src={author}
-                            width="100"
-                            height="100"
-                            loading="lazy"
-                            alt="Author"
-                            className="img-cover"
-                          />
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </figure>
+                  <div className="card-content">
+                    <ul className="card-meta-list">
+                      {post.tags.map((tag, i) => (
+                        <li key={i}>
+                          <span className="card-tag">{tag}</span>
+                        </li>
+                      ))}
+                    </ul>
 
-                <div className="card-content">
-                  <ul className="card-meta-list">
-                    {post.tags.map((tag, i) => (
-                      <li key={i}>
-                        <a href="#" className="card-tag">
-                          {tag}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
+                    <h3 className="h4">
+                      <Link to={`/news/${post._id}`} className="card-title hover:underline">
+                        {post.title}
+                      </Link>
+                    </h3>
 
-                  <h3 className="h4">
-                    <a href="#" className="card-title hover:underline">
-                      {post.title}
-                    </a>
-                  </h3>
-
-                  <p className="card-text">{post.description}</p>
+                    <p className="card-text">{truncate(post.description, 35)}</p>
+                    <Link to={`/news/${post._id}`} className="read-more">Read More →</Link>
+                  </div>
                 </div>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
-    <RecentPosts/>
-    <Footer/>
+      <RecentPosts />
+      <Footer />
+    </>
+  );
+};
 
-
-</>
-  )
-}
-
-export default Blog2
+export default Blog2;

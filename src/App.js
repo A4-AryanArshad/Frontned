@@ -9,6 +9,12 @@ import Plan from "./Plan/Plan";
 import Services from "./Services/Services";
 import Blog from "./Blog/Blog";
 import Blog2 from "./Blog2/Blog2";
+import Dashboard from "./Dashboard/Dashboard";
+import NewsDashboard from "./NewsDashboard/NewsDashboard";
+import BlogDashboard from "./BlogDashboard/BlogDashboard";
+import AdminRoute from "./AdminRoute";
+import NewsDetails from "./Blog2/NewsDetails";
+import BlogDetails from "./Blog2/BlogDetails";
 
 function App() {
   return (
@@ -22,6 +28,19 @@ function App() {
         <Route path="/news" element={<Blog2/>} />
         <Route path="/pricing" element={<Plan/>} />
         <Route path="/signup" element={<Signup/>}  />
+  
+        <Route path="/news/:id" element={<NewsDetails/>} />
+        <Route path="/blogs/:id" element={<BlogDetails/>} />
+         {/* ✅ Admin-only routes */}
+         <Route path="/Articles" element={
+          <AdminRoute><Dashboard /></AdminRoute>
+        } />
+        <Route path="/Add News" element={
+          <AdminRoute><NewsDashboard /></AdminRoute>
+        } />
+        <Route path="/Add Blog" element={
+          <AdminRoute><BlogDashboard /></AdminRoute>
+        } />
       </Routes>
     </Router>
   );

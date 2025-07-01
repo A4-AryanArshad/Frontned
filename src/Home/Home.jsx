@@ -9,6 +9,7 @@ import Service from "./Services";
 import DonateSection from "./Donate";
 import TestimonialsPartnerEventInsta from "./TestimonialsPartnerEventInsta";
 import Header from "./Header";
+import Footer2 from "./Footer2";
 
 const Home = () => {
   return (
@@ -22,7 +23,9 @@ const Home = () => {
       <PartnerSection />
       <Service />
       <DonateSection />
+
       <TestimonialsPartnerEventInsta />
+      <Footer2/>
     </>
   );
 };

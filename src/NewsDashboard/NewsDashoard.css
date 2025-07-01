@@ -1,0 +1,148 @@
+#yytr{
+  padding-top: 300px;
+  background-color: #90be55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#hd1{
+  font-weight: 300;
+  font-size: 40px;
+}
+
+#fdn1 input{
+
+  width: 400px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+#fdn1 button{
+  background-color: black;
+  color: white;
+  width: 400px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 30px;
+}
+
+#fdn1 textarea{
+  width: 400px;
+  border: 1px solid black;
+  padding: 10px;
+height: 200px;
+  border-radius: 20px;
+  background-color: #90be55;
+  margin: 20px;
+}
+
+.news-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 400px;
+}
+
+
+.tag {
+  display: inline-block;
+  background: #eee;
+  padding: 3px 6px;
+  margin: 3px;
+  border-radius: 10px;
+}
+.news-cards img{
+  width: 100%;
+}
+
+.news-cards button{
+  background-color: red;
+  padding: 10px;
+  width: 200px;
+  border-radius: 20px;
+}
+
+.card{
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+
+@media screen and (max-width: 875px) {
+
+.card{
+  width: 300px;
+
+}
+
+}
+
+@media screen and (max-width: 651px) {
+
+  .card{
+    width: 300px;
+  
+  }
+
+  .card button{
+    width: 100px;
+
+  }
+  .news-cards{
+   display: flex;
+   flex-direction: column;
+  }
+  }
+
+
+  @media screen and (max-width: 471px) {
+#fdn1 input{
+  width: 300px;
+}
+#fdn1 textarea{
+  width: 300px;
+}
+
+
+
+#fdn1 button{
+width: 300px;
+}
+#hd1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+  }
+
+
+
+  #llk{
+margin: auto;
+  }
+
+
+
+  #rre{
+display: flex;
+align-items: baseline;
+justify-content: center;
+flex-direction: column;
+  }
+
+  #innerrre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
