@@ -20,7 +20,7 @@ const Login = () => {
 
     try {
 
-      window.alert("Hello")
+
       const res = await fetch('https://cbackend-lilac.vercel.app/api/login', {
         method: 'POST',
         credentials: 'include', // important for cookies
