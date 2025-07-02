@@ -3,8 +3,10 @@ import Header from '../Home/Header';
 import { useNavigate } from 'react-router-dom';
 import "./Login.css";
 import Footer2 from '../Home/Footer2';
+import { useTranslation } from 'react-i18next';
 
 const Login = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({ email: '', password: '' });
   const navigate = useNavigate();
 
@@ -61,16 +63,16 @@ const Login = () => {
         <Header />
         <div id="uuy">
           <form id="form" onSubmit={handleLogin}>
-            <h2>Login</h2>
+          <h2>{t("login.title")}</h2>
             <div id="ineerf">
-              <span>Email:</span>
+            <span>{t("login.email")} :</span>
               <input type="email" name="email" value={formData.email} onChange={handleChange} required />
             </div>
             <div id="ineerf">
-              <span>Password:</span>
+            <span>{t("login.password")} :</span>
               <input type="password" name="password" value={formData.password} onChange={handleChange} required />
             </div>
-            <button type="submit">Login</button>
+            <button type="submit">{t("login.submit")}</button>
           </form>
         </div>
       </div>

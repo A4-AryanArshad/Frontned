@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   IoLeafOutline,
   IoEarthOutline,
@@ -6,35 +6,45 @@ import {
   IoBoatOutline,
   IoArrowForward,
 } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
 
 import subtitleImage from "./assets/images/subtitle-img-green.png";
 import serviceBg from "./assets/images/service-map.png";
 import "./assets/css/style.css";
 
-const services = [
-  {
-    icon: <IoLeafOutline />,
-    title: "Training & Awareness",
-    text: "Strategic Sustainability Solution Enhance understanding of carbon markets, emissions reduction, and best practices through our comprehensive corporate training programs",
-  },
-  {
-    icon: <IoEarthOutline />,
-    title: "Net-Zero & ESG Strategies",
-    text: "Develop robust net-zero strategies and integrate winning ESG (Environmental, Social, Governance) practices for sustainable business impact.",
-  },
-  {
-    icon: <IoFlowerOutline />,
-    title: "Blockchain Carbon Marketplace",
-    text: " Blockchain Carbon Marketplace Trade verified carbon credits securely and transparently on our innovative DecarbXchange P2P blockchain marketplace.",
-  },
-  {
-    icon: <IoBoatOutline />,
-    title: "Impactful Green Investments",
-    text: "Access high-impact sustainable projects through fractional investments, contributing to a greener planet while earning returns",
-  },
-];
-
 const Service = () => {
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem("selectedLanguage");
+    if (savedLang && savedLang !== i18n.language) {
+      i18n.changeLanguage(savedLang);
+    }
+  }, [i18n]);
+
+  const services = [
+    {
+      icon: <IoLeafOutline />,
+      title: t("serviceData.0.title"),
+      text: t("serviceData.0.text"),
+    },
+    {
+      icon: <IoEarthOutline />,
+      title: t("serviceData.1.title"),
+      text: t("serviceData.1.text"),
+    },
+    {
+      icon: <IoFlowerOutline />,
+      title: t("serviceData.2.title"),
+      text: t("serviceData.2.text"),
+    },
+    {
+      icon: <IoBoatOutline />,
+      title: t("serviceData.3.title"),
+      text: t("serviceData.3.text"),
+    },
+  ];
+
   return (
     <section
       className="section service"
@@ -44,11 +54,11 @@ const Service = () => {
       <div className="container">
         <p className="section-subtitle">
           <img src={subtitleImage} width="32" height="7" alt="Wavy line" />
-          <span>What We Do</span>
+          <span>{t("service.subtitle")}</span>
         </p>
 
         <h2 className="h2 section-title">
-          We Work Differently to <strong>keep The World Safe</strong>
+          {t("service.heading.part1")} <strong>{t("service.heading.part2")}</strong>
         </h2>
 
         <ul className="service-list">
@@ -59,7 +69,7 @@ const Service = () => {
                 <h3 className="h3 card-title">{service.title}</h3>
                 <p className="card-text">{service.text}</p>
                 <a href="#" className="btn-link">
-                  <span>Read More</span>
+                  <span>{t("service.readMore")}</span>
                   <IoArrowForward aria-hidden="true" />
                 </a>
               </div>

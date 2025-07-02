@@ -1195,11 +1195,8 @@ body {
    */
 
   .hero {
-    background-image: url("https://www.airdropbikes.com/cdn/shop/articles/1800-Blog-Carbon-Offsetting_1600x.jpg?v=1602672422");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: left;
-    min-height: 780px;
+    background-color: transparent;
+   
   }
 
 
@@ -1521,5 +1518,66 @@ body {
 #wqeq{
   background-color: black;
   height: 180px;
+}
+}
+
+#hhw{
+  background-color: black;
+}
+
+#countercar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://www.airdropbikes.com/cdn/shop/articles/1800-Blog-Carbon-Offsetting_1600x.jpg?v=1602672422");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  min-height: 780px;
+}
+
+
+@media screen and (max-width: 1486px) {
+  #countercar{
+
+flex-direction: column;
+  }
+#counter{
+margin-bottom: 300px;
+}
+#home{
+margin-top: 100px;
+margin-bottom: -200px;
+
+
+}
+}
+
+@media screen and (max-width: 1163px) {
+  #countercar{
+
+flex-direction: column;
+  }
+#counter{
+margin-top: 300px;
+}
+#home{
+
+
+}
+}
+
+@media screen and (max-width: 776px) {
+  #countercar{
+
+flex-direction: column;
+  }
+#counter{
+margin-top: 300px;
+
+}
+#home{
+background-color: transparent;
+
 }
 }

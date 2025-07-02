@@ -12,7 +12,7 @@ import Hero from "./Hero";
 import Features from "./Features";
 import About from "./About";
 import CTA from "./CTA";
-import Service from "./Services";
+import Service from "./Service";
 import PartnerSection from "./PartnerSection";
 import DonateSection from "./Donate";
 import TestimonialsPartnerEventInsta from "./TestimonialsPartnerEventInsta";

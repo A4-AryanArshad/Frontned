@@ -5,7 +5,7 @@ import Features from "./Features";
 import About from "./About";
 import CTA from "./CTA";
 import PartnerSection from "./PartnerSection";
-import Service from "./Services";
+import Service from "./Service";
 import DonateSection from "./Donate";
 import TestimonialsPartnerEventInsta from "./TestimonialsPartnerEventInsta";
 import Header from "./Header";

@@ -1,36 +1,46 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   IoShieldCheckmarkOutline,
   IoWaterOutline,
   IoLeafOutline,
   IoSnowOutline,
 } from "react-icons/io5";
-import "./assets/css/style.css"; // adjust the path as needed
-
-const featuresData = [
-  {
-    icon: <IoShieldCheckmarkOutline />,
-    title: "Safe Shelter",
-    text: "Reduces energy use, lowers construction-related carbon emissions.",
-  },
-  {
-    icon: <IoWaterOutline />,
-    title: "Safe Water",
-    text: "Conserves energy in purification, limits emissions output.",
-  },
-  {
-    icon: <IoLeafOutline />,
-    title: "Ecology Save",
-    text: "Protects carbon sinks, maintains natural carbon balance.",
-  },
-  {
-    icon: <IoSnowOutline />,
-    title: "Environment",
-    text: "Healthy ecosystems absorb carbon, regulate global climate.",
-  },
-];
+import { useTranslation } from "react-i18next";
+import "./assets/css/style.css";
 
 const Features = () => {
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem("selectedLanguage");
+    if (savedLang && savedLang !== i18n.language) {
+      i18n.changeLanguage(savedLang);
+    }
+  }, [i18n]);
+
+  const featuresData = [
+    {
+      icon: <IoShieldCheckmarkOutline />,
+      title: t("features.safe_shelter.title"),
+      text: t("features.safe_shelter.text"),
+    },
+    {
+      icon: <IoWaterOutline />,
+      title: t("features.safe_water.title"),
+      text: t("features.safe_water.text"),
+    },
+    {
+      icon: <IoLeafOutline />,
+      title: t("features.ecology_save.title"),
+      text: t("features.ecology_save.text"),
+    },
+    {
+      icon: <IoSnowOutline />,
+      title: t("features.environment.title"),
+      text: t("features.environment.text"),
+    },
+  ];
+
   return (
     <section className="section features">
       <div className="container">

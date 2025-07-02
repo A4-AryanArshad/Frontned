@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import Header from '../Home/Header';
 import Footer2 from '../Home/Footer2';
 
-
-
 const Signup = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -24,13 +25,10 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      const response = await fetch('https://cbackend-lilac.vercel.app/api/signup', {  // change port/path if needed
+      const response = await fetch('https://cbackend-lilac.vercel.app/api/signup', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
@@ -38,7 +36,6 @@ const Signup = () => {
       if (response.ok) {
         alert('Signup successful!');
         navigate('/login');
-        // redirect or clear form
       } else {
         alert(data.message || 'Signup failed!');
       }
@@ -55,33 +52,33 @@ const Signup = () => {
 
         <div id="uuy">
           <form id="form" onSubmit={handleSubmit}>
-            <h2>SignUp</h2>
+            <h2>{t("signup.title")}</h2>
 
             <div id="ineerf">
-              <span>First Name :</span>
+              <span>{t("signup.first_name")} :</span>
               <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
             </div>
 
             <div id="ineerf">
-              <span>Last Name :</span>
+              <span>{t("signup.last_name")} :</span>
               <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
             </div>
 
             <div id="ineerf">
-              <span>Email :</span>
+              <span>{t("signup.email")} :</span>
               <input type="email" name="email" value={formData.email} onChange={handleChange} required />
             </div>
 
             <div id="ineerf">
-              <span>Password :</span>
+              <span>{t("signup.password")} :</span>
               <input type="password" name="password" value={formData.password} onChange={handleChange} required />
             </div>
 
-            <button type="submit">Sign Up</button>
+            <button type="submit">{t("signup.submit")}</button>
           </form>
         </div>
       </div>
-      <Footer2/>
+      <Footer2 />
     </>
   );
 };

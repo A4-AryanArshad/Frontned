@@ -1,40 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./assets/css/style.css";
 import {
   IoMenuOutline,
   IoCloseOutline,
   IoChevronForwardOutline,
-  IoSearchOutline,
   IoHeartOutline
 } from "react-icons/io5";
-import Hero from "./Hero";
-import Features from "./Features";
-import About from "./About";
-import CTA from "./CTA";
-import Service from "./Services";
-import PartnerSection from "./PartnerSection";
-import DonateSection from "./Donate";
-import TestimonialsPartnerEventInsta from "./TestimonialsPartnerEventInsta";
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
+  const { i18n, t } = useTranslation();
+
+  // Load language from localStorage
+  useEffect(() => {
+    const savedLang = localStorage.getItem("selectedLanguage");
+    if (savedLang && savedLang !== i18n.language) {
+      i18n.changeLanguage(savedLang);
+    }
+  }, [i18n]);
+
+  const handleLanguageChange = (e) => {
+    const selectedLang = e.target.value;
+    i18n.changeLanguage(selectedLang);
+    localStorage.setItem("selectedLanguage", selectedLang);
+  };
 
   return (
     <>
-      <header id="wqeq" className="header">
+      <header id="hhw"className="header">
         <div className="container">
           <h1>
-            <a href="#" className="logo"><img id="logoo" src="Logo.png"></img></a>
+            <a href="#" className="logo"><img id="logoo" src="Logo.png" alt="Logo" /></a>
           </h1>
 
-          <select name="language" className="lang-switch">
-            <option value="english">English</option>
-            <option value="french">French</option>
-            <option value="spanish">Spanish</option>
+          {/* Language Dropdown */}
+          <select
+            name="language"
+            className="lang-switch"
+            onChange={handleLanguageChange}
+            value={i18n.language}
+          >
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
           </select>
 
-          {/* Open Button */}
+          {/* Open Menu Button */}
           <button
             className="nav-open-btn"
             aria-label="Open Menu"
@@ -43,7 +56,7 @@ const Header = () => {
             <IoMenuOutline />
           </button>
 
-          {/* Navbar */}
+          {/* Navigation Menu */}
           <nav className={`navbar ${navOpen ? "active" : ""}`}>
             <button
               className="nav-close-btn"
@@ -53,38 +66,58 @@ const Header = () => {
               <IoCloseOutline />
             </button>
 
-            <a href="#" className="logo">C02e PORTAL</a>
+            <a href="#" className="logo">{t("navbar.logo")}</a>
 
             <ul className="navbar-list">
-              {["Home", "Service", "Trade", "Pricing", "News", "Login"].map((item, idx) => (
-                <li key={idx}>
-                  <Link
-                    to={`/${item.toLowerCase() === "home" ? "" : item.toLowerCase()}`}
-                    className="navbar-link"
-                    onClick={() => setNavOpen(false)}
-                  >
-                    <span>{item}</span>
-                    <IoChevronForwardOutline aria-hidden="true" />
-                  </Link>
-                </li>
-              ))}
-
+              <li>
+                <Link to="/" className="navbar-link" onClick={() => setNavOpen(false)}>
+                  <span>{t("navbar.home")}</span>
+                  <IoChevronForwardOutline />
+                </Link>
+              </li>
+              <li>
+                <Link to="/service" className="navbar-link" onClick={() => setNavOpen(false)}>
+                  <span>{t("navbar.service")}</span>
+                  <IoChevronForwardOutline />
+                </Link>
+              </li>
+              <li>
+                <Link to="/trade" className="navbar-link" onClick={() => setNavOpen(false)}>
+                  <span>{t("navbar.trade")}</span>
+                  <IoChevronForwardOutline />
+                </Link>
+              </li>
+              <li>
+                <Link to="/pricing" className="navbar-link" onClick={() => setNavOpen(false)}>
+                  <span>{t("navbar.pricing")}</span>
+                  <IoChevronForwardOutline />
+                </Link>
+              </li>
+              <li>
+                <Link to="/news" className="navbar-link" onClick={() => setNavOpen(false)}>
+                  <span>{t("navbar.news")}</span>
+                  <IoChevronForwardOutline />
+                </Link>
+              </li>
+              <li>
+                <Link to="/login" className="navbar-link" onClick={() => setNavOpen(false)}>
+                  <span>{t("navbar.login")}</span>
+                  <IoChevronForwardOutline />
+                </Link>
+              </li>
             </ul>
           </nav>
 
           <div className="header-action">
-         
-
-          <Link to="/signup">  <button className="btn btn-primary">
-              <span>Join Now</span>
-              <IoHeartOutline aria-hidden="true" />
-            </button></Link>
+            <Link to="/signup">
+              <button className="btn btn-primary">
+                <span>{t("join_now")}</span>
+                <IoHeartOutline />
+              </button>
+            </Link>
           </div>
         </div>
       </header>
-
-      {/* Other Sections */}
-
     </>
   );
 };

@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { IoHeartOutline } from "react-icons/io5";
-import ctaImage from "./assets/images/cta-banner.jpg";
 import "./assets/css/style.css";
 
 const PartnerSection = () => {
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem("selectedLanguage");
+    if (savedLang && savedLang !== i18n.language) {
+      i18n.changeLanguage(savedLang);
+    }
+  }, [i18n]);
+
   return (
     <section className="section cta">
       <div className="container">
         <div className="cta-content">
-          <h2 className="h2 section-title">Start exploring now by joining us!</h2>
+          <h2 className="h2 section-title">{t("cta.title")}</h2>
           <button className="btn btn-outline">
-            <span>JOIN NOW</span>
+            <span>{t("cta.button")}</span>
             <IoHeartOutline aria-hidden="true" />
           </button>
         </div>
