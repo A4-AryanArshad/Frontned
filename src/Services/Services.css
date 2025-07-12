@@ -321,3 +321,20 @@ justify-content: center;
     align-items: center;
     justify-content: center;
 }
+
+#parenta{
+display: flex;
+
+}
+#iparent{
+    display: flex;
+    margin: 2px;
+}
+
+#ttable{
+margin: auto;
+margin-left: -100px;
+}
+#tb{
+    margin-left:90px !important;
+}

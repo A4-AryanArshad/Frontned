@@ -20,7 +20,12 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true
-  }
+  },
+  package: {
+    type: String,
+    default: ''
+  },
+  courses: [{ type: String }]
 });
 
 module.exports = mongoose.model('User', userSchema);

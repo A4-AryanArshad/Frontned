@@ -36,7 +36,6 @@ border-radius: 20px;
 margin: 40px;
 }
 
-
 #Cards3{
     padding: 60px;
 border: 1px solid black;
@@ -66,6 +65,21 @@ margin-top: 20px;
     cursor: pointer;
 margin-top: 20px;
 }
+#totalCards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#inCard {
+    width: 100%;
+}
+#Listing {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* Remove all modern/plan-card styles */
+.plan-card, .plan-banner, .plan-title, .plan-price, .plan-features, .feature-yes, .feature-no, .plan-btn, .subfeature, .modern-card, .modern-badge, .modern-icon, .modern-content, .modern-title, .modern-accent, .modern-desc, .modern-btn, .btn-personal, .btn-business, .btn-enterprise { display: none !important; }
+
 #innerheading{
     display: flex;
     align-items: center;
@@ -75,7 +89,7 @@ margin-top: 20px;
 
 }
 
-#totalCards{
+#totalCards {
     display: flex;
     align-items: center;
     justify-content: center;

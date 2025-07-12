@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 
 const router = express.Router();
 
-// 🔐 Hardcoded JWT Secret Key
+// JWT Secret from environment variables
 const JWT_SECRET = 'this_is_a_secure_jwt_secret_123456';
 
 // Signup Route
@@ -68,11 +68,32 @@ router.post('/login', async (req, res) => {
       maxAge: 2 * 24 * 60 * 60 * 1000 // 2 days
     });
 
-    res.status(200).json({ message: 'Login successful' });
+    res.status(200).json({ message: 'Login successful', package: user.package });
 
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: 'Server error' });
+  }
+});
+
+// Get current user info
+router.get('/me', async (req, res) => {
+  const token = req.cookies.token;
+  if (!token) return res.status(401).json({ error: 'No token' });
+  try {
+    const decoded = jwt.verify(token, JWT_SECRET);
+    const user = await User.findById(decoded.userId);
+    if (!user) return res.status(404).json({ error: 'User not found' });
+    res.json({
+      email: user.email,
+      package: user.package,
+      courses: user.courses || [],
+      firstName: user.firstName,
+      lastName: user.lastName,
+      role: user.role || 'user',
+    });
+  } catch (err) {
+    res.status(401).json({ error: 'Invalid token' });
   }
 });
 
