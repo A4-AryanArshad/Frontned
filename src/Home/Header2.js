@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./assets/css/style.css";
 import {
   IoMenuOutline,
@@ -19,6 +19,7 @@ import TestimonialsPartnerEventInsta from "./TestimonialsPartnerEventInsta";
 
 const Header2= () => {
   const [navOpen, setNavOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <>
@@ -28,7 +29,7 @@ const Header2= () => {
             <a href="#" className="logo"><img id="logoo" src="./Logo.png"></img></a>
           </h1>
 
-      
+
           {/* Open Button */}
           <button
             className="nav-open-btn"
@@ -51,18 +52,22 @@ const Header2= () => {
             <a href="#" className="logo">C02e PORTAL</a>
 
             <ul className="navbar-list">
-              {["Articles", "Add News", "Add Blog"].map((item, idx) => (
+              {["Articles", "Add News", "Add Blog", "Upload Courses", "Featured Listing"].map((item, idx) => {
+                let to = item === "Featured Listing" ? "/admin/featured-listing" : `/${item.toLowerCase().replace(/ /g, '-')}`;
+                const isActive = location.pathname === to;
+                return (
                 <li key={idx}>
                   <Link
-                    to={`/${item.toLowerCase() === "home" ? "" : item.toLowerCase()}`}
+                      to={to}
                     className="navbar-link"
                     onClick={() => setNavOpen(false)}
                   >
-                    <span>{item}</span>
+                      <span style={isActive ? { borderBottom: '2px solid #90be55', display: 'inline-block' } : {}}>{item}</span>
                     <IoChevronForwardOutline aria-hidden="true" />
                   </Link>
                 </li>
-              ))}
+                );
+              })}
 
             </ul>
           </nav>
